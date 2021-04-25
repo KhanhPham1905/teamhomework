@@ -1,0 +1,24 @@
+1  git branch
+-	Branch dùng để phân nhánh  và branch đẫ phân nhánh sẽ không ảnh hưởng đến các branch khác nên có thể tiến hành nhiều thay đổi đồng thời trong 1 reposditory
+-git branch <tên branch>: Tạo branch 
+-git branch : Liệt kê branch ở local 
+-git branch -r : Liệt kê branch trên git server
+-git branch -a : Liệt kê toàn bộ branch
+2  git checkout và git switch
++ công thức tạo nhánh mới:
+		git switch -c  <tên nhánh>
+		git checkout -b <tên nhánh>
++công thức dùng để chuyển sang nhánh khác
+		git switch <tên nhánh muốn chuyển tới>
+		git checkout <tên nhánh muốn chuyển tới>
+git checkout được dùng phổ biến hơn git switch
+3 pull request và merge request
+Chức năng để thông báo với trưởng dự án thay đổi đã push lên repository
+4 git fetch
+Lệnh git fetch tải về dữ liệu từ remote repo (các dữ liệu như các commit ,các file , các refs) , dữ liệu tải về để theo dõi sự thay đổi của remote . tuy nhiên tải về bằng git fetch nó chưa tích hợp sự thay đổi ngayLocal repository của bạn , mục dích để theo dõi các commit người khác đã cập nhật lên server để có được thông tin khác nhau giữa remote và local
+5 git merge
+ Là kết hợp sự thay đổi của các commit kể từ lúc tách nhánh của nhánh hiện tại vào nhánh tách ra trước đó
+ Cú pháp : git merge < tên branch>
+6 git pull
+Git pull = git fetch + git merge
+Lệnh git pull trước tiên chạy git fetch để tải nội dung từ remote repository đã chỉ định. Sau đó, một git merge được thực thi để hợp nhất các remote content ref và head vào một local merge commit mới
